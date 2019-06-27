@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Animated } from 'react-native';
 import { PanGestureHandler, State } from 'react-native-gesture-handler';
@@ -13,7 +13,6 @@ import Menu from '~/components/Menu';
 
 export default function Main() {
   const translateY = new Animated.Value(0)
-  const [openMenu, handleOpen] = useState(false) 
   let offset = 0;
 
   const animatedEvent = new Animated.event(
@@ -55,11 +54,7 @@ export default function Main() {
 
   return (
     <Container>
-      <Header 
-        translateY={translateY} 
-        openMenu={openMenu} 
-        handleOpen={handleOpen}
-      />
+      <Header/>
       <Content>
         <Menu translateY={translateY}/>
         <PanGestureHandler 
