@@ -1,3 +1,3 @@
 # Nubank
 
-Recreating nubank interface
+Nubank clone using **React Native** 
